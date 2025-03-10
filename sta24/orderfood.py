@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the dataset
-file_path = 'path_to_your_file.csv'  # Replace with the correct file path
+file_path = 'sta24.csv'  # Replace with the correct file path
 data = pd.read_csv(file_path)
 
 # Generate the Bar Chart - Distribution of Food Purchase Locations (Canteen vs. Online)
