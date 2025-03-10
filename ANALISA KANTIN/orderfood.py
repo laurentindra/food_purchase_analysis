@@ -15,6 +15,11 @@ except Exception as e:
     st.error(f"An error occurred: {e}")
     st.stop()  # Stop the app if any other error occurs
 
+# Display the dataset as a table
+def display_dataset():
+    st.subheader("Dataset Preview")
+    st.dataframe(data)  # Display the entire dataset in a table format
+
 # Generate the Bar Chart - Distribution of Food Purchase Locations (Canteen vs. Online)
 def plot_bar_chart():
     try:
@@ -71,6 +76,9 @@ def plot_stacked_bar_chart():
 def main():
     st.title('Food Purchase Preferences Analysis')
     st.markdown("This app analyzes student preferences for food purchases and reasons for choosing online or canteen options.")
+    
+    # Display the dataset
+    display_dataset()
     
     # Bar Chart - Food Purchase Location Distribution
     st.subheader("1. Distribution of Food Purchase Locations")
